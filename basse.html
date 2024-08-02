@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <!-- Title  -->
+    <title>Hôpital el-maarouf</title>
+
+    <!-- Favicon  -->
+    <link rel="icon" href="img/core-img/favicon.ico">
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="medilife-load"></div>
+    </div>
+
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area">
+        <!-- Top Header Area -->
+        <div class="top-header-area">
+            <div class="container h-100">
+                <div class="row h-100">
+                    <div class="col-12 h-100">
+                        <div class="h-100 d-md-flex justify-content-between align-items-center">
+                            <p>Bienvenue <span>El-Maarouf</span> </p>
+                            <p>Moroni Ambassadeur : info@chn-elmaarouf.com: <span>773 26 04 ou le 115</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Header Area -->
+        <div class="main-header-area" id="stickyHeader">
+            <div class="container h-100">
+                <div class="row h-100 align-items-center">
+                    <div class="col-12 h-100">
+                        <div class="main-menu h-100">
+                            <nav class="navbar h-100 navbar-expand-lg">
+                                <!-- Logo Area  -->
+                                <a class="navbar-brand" href="index.html"><img src="img/core-img/logo.png" alt="Logo"></a>
+
+                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#medilifeMenu" aria-controls="medilifeMenu" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+
+                                <div class="collapse navbar-collapse" id="medilifeMenu">
+                                    <!-- Menu Area -->
+                                    <ul class="navbar-nav ml-auto">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="index.html">Accueil <span class="sr-only">(current)</span></a>
+                                        </li>
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages</a>
+                                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                                <a class="dropdown-item" href="index.html">Accueil</a>
+                                                <a class="dropdown-item" href="about-us.html">À propos de nous</a>
+                                                <a class="dropdown-item" href="services.html">Services</a>
+                                                <a class="dropdown-item" href="blog.html">Nouvelles</a>
+                                                <a class="dropdown-item" href="single-blog.html">Détails de l'actualité</a>
+                                                <a class="dropdown-item" href="contact.html">Contact</a>
+                                                <a class="dropdown-item" href="elements.html">Éléments</a>
+                                                <a class="dropdown-item" href="index-icons.html">Toutes les icônes</a>
+                                            </div>
+                                        </li>
+                                        <li class="nav-item active">
+                                            <a class="nav-link" href="about-us.html">À propos de nous</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="services.html">Services</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="blog.html">Nouvelles</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="contact.html">Contact</a>
+                                        </li>
+                                    </ul>
+                                    <!-- Appointment Button -->
+                                    <a href="./djayouf.html" class="btn medilife-appoint-btn ml-30"> Djayouf <span>  votre assistant</a>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+
+    <!-- ***** Breadcumb Area Start ***** -->
+    <section class="breadcumb-area bg-img gradient-background-overlay" style="background-image: url(img/bg-img/breadcumb1.jpg);">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-12">
+                    <div class="breadcumb-content">
+                        <h3 class="breadcumb-title">Base de Données El-Maarouf</h3>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Breadcumb Area End ***** -->
+
+
+
+
+
+
+
+        
+        
+        
+            <link rel="stylesheet" href="styles.css">
+            <script src="script.js"></script>
+       
+        <h1></h1>
+        <form id="data-form">
+            <table>
+                <pre>
+                <tr>
+                    <td><label for="name">Nom et prénom:</label></td>
+                    <td><input type="text" id="name" required></td>
+                    <td><label for="dob">Date de naissance:</label></td>
+                    <td><input type="date" id="dob" required></td>
+                </tr>
+                
+                <tr>
+                    <td><label for="sex">Sexe:</label></td>
+                    <td>
+                        <select id="sex" required>
+                            <option value="Masculin">Masculin</option>
+                            <option value="Féminin">Féminin</option>
+                            <option value="Autre">Autre</option>
+                        </select>
+                    </td>
+                    <td><label for="ssn">Numéro de sécurité sociale:</label></td>
+                    <td><input type="text" id="ssn"></td>
+                </tr>
+                <tr>
+                    <td><label for="address">Adresse:</label></td>
+                </br>
+                    <td><input type="text" id="address"></td>
+                    <td><label for="phone">Numéro de téléphone:</label></td>
+                    <td><input type="tel" id="phone"></td>
+                </tr>
+                <!-- Pour la table "Patients" -->
+                <tr>
+                    <td><label for="emergencyContact">Personne de contact en cas d'urgence:</label></td>
+                    <td><input type="text" id="emergencyContact"></td>
+                </tr>
+                <!-- Pour la table "Medecins" et "PersonnelMedical" -->
+                <tr>
+                    <td><label for="workingHours">Horaires de travail:</label></td>
+                    <td><input type="text" id="workingHours"></td>
+                    <td><label for="contact">Contact:</label></td>
+                    <td><input type="text" id="contact"></td>
+                </tr>
+                <!-- Pour la table "Rendezvous" -->
+                <tr>
+                    <td><label for="appointmentStatus">État du rendez-vous:</label></td>
+                    <td>
+                        <select id="appointmentStatus">
+                            <option value="Planifié">Planifié</option>
+                            <option value="En cours">En cours</option>
+                            <option value="Terminé">Terminé</option>
+                        </select>
+                    </td>
+                </tr>
+                <!-- Pour la table "DossiersMedicaux" -->
+                <tr>
+                    <td><label for="diagnostics">Diagnostics:</label></td>
+                    <td colspan="3"><textarea id="diagnostics"></textarea></td>
+                </tr>
+                <tr>
+                    <td><label for="prescribedTreatments">Traitements et médicaments prescrits:</label></td>
+                    <td colspan="3"><textarea id="prescribedTreatments"></textarea></td>
+                </tr>
+                <tr>
+                    <td><label for="medicalNotes">Notes médicales:</label></td>
+                    <td colspan="3"><textarea id="medicalNotes"></textarea></td>
+                </tr>
+                <!-- Pour la table "SallesHopital" -->
+                <tr>
+                    <td><label for="roomEquipment">Équipements dans la salle:</label></td>
+                    <td colspan="3"><input type="text" id="roomEquipment"></td>
+                </tr>
+                <!-- Pour la table "LaboratoiresEtExamens" -->
+                <tr>
+                    <td><label for="examType">Type d'examen:</label></td>
+                    <td><input type="text" id="examType"></td>
+                    <td><label for="examDate">Date de l'examen:</label></td>
+                    <td><input type="datetime-local" id="examDate"></td>
+                </tr>
+                <!-- Pour la table "PersonnelNonMedical" -->
+                <tr>
+                    <td><label for="nonMedicalHours">Horaires de travail:</label></td>
+                    <td colspan="3"><input type="text" id="nonMedicalHours"></td>
+                </tr>
+                <!-- Pour la table "ArchivageEtGestionDesDonnees" -->
+                <tr>
+                    <td><label for="dataRetentionPolicy">Politiques de conservation des dossiers:</label></td>
+                    <td colspan="3"><textarea id="dataRetentionPolicy"></textarea></td>
+                </tr>
+                <tr>
+                    <td><label for="archiveAndDestructionDates">Dates d'archivage et de destruction:</label></td>
+                    <td colspan="3"><input type="text" id="archiveAndDestructionDates"></td>
+                </tr>
+            </table>
+            <button type="submit">Ajouter</button>
+        </form>
+        <table id="data-table">
+            <thead>
+                <tr>
+                    <th>Nom et prénom</th>
+                    <th>Date de naissance</th>
+                    <th>Sexe</th>
+                    <th>Numéro de sécurité sociale</th>
+                    <th>Adresse</th>
+                    <th>Numéro de téléphone</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+        
+    
+    
+        <style>
+
+/* styles.css */
+
+/* Style du corps de la page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4ff; /* Couleur de fond */
+    margin: 0;
+    padding: 0;
+}
+
+/* Style du titre */
+h1 {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+/* Style du formulaire */
+#data-form {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style des étiquettes */
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #333;
+    font-size: 18px;
+}
+
+/* Style des champs de saisie */
+input[type="text"],
+input[type="date"],
+input[type="tel"],
+select,
+textarea {
+    width: 75%;
+    padding: 15px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    font-size: 16px;
+}
+
+/* Style des boutons */
+button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+/* Style de la table de données (Base de Données) */
+#data-table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    background-color: #1e90ff; /* Bleu foncé pour le fond du tableau */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Ombre légère */
+    border-radius: 15px;
+}
+
+#data-table th, #data-table td {
+    border: 1px solid #ccc;
+    padding: 15px;
+    text-align: left;
+    color: #fff; /* Couleur du texte blanc */
+}
+
+/* Style des lignes impaires pour améliorer la lisibilité */
+#data-table tr:nth-child(odd) {
+    background-color: #356b8c; /* Bleu légèrement plus clair pour les lignes impaires */
+}
+
+/* Style des lignes au survol de la souris pour mettre en évidence */
+#data-table tr:hover {
+    background-color: #2e3b4e; /* Bleu foncé au survol */
+}
+
+/* Style des options de sélection */
+select {
+    width: 100%;
+    padding: 15px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    font-size: 16px;
+}
+
+/* Style des cases à cocher */
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+/* Style pour les erreurs de validation */
+input:invalid {
+    border: 2px solid red;
+}
+
+
+        </style>
+
+
+
+
+<script>
+
+// script.js
+document.getElementById("data-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+    
+    const name = document.getElementById("name").value;
+    const dob = document.getElementById("dob").value;
+    const sex = document.getElementById("sex").value;
+    const ssn = document.getElementById("ssn").value;
+    const address = document.getElementById("address").value;
+    const phone = document.getElementById("phone").value;
+
+    const table = document.getElementById("data-table").getElementsByTagName('tbody')[0];
+    const newRow = table.insertRow(table.rows.length);
+
+    const cell1 = newRow.insertCell(0);
+    const cell2 = newRow.insertCell(1);
+    const cell3 = newRow.insertCell(2);
+    const cell4 = newRow.insertCell(3);
+    const cell5 = newRow.insertCell(4);
+    const cell6 = newRow.insertCell(5);
+
+    cell1.innerHTML = name;
+    cell2.innerHTML = dob;
+    cell3.innerHTML = sex;
+    cell4.innerHTML = ssn;
+    cell5.innerHTML = address;
+    cell6.innerHTML = phone;
+
+    document.getElementById("data-form").reset();
+});
+
+
+// script.js
+$(document).ready(function() {
+    $("#data-form").on("submit", function(event) {
+        event.preventDefault();
+        
+        const name = $("#name").val();
+        const dob = $("#dob").val();
+        const sex = $("#sex").val();
+        const ssn = $("#ssn").val();
+        const address = $("#address").val();
+        const phone = $("#phone").val();
+
+        const table = $("#data-table tbody");
+        const newRow = $("<tr>");
+        
+        newRow.append($("<td>").text(name));
+        newRow.append($("<td>").text(dob));
+        newRow.append($("<td>").text(sex));
+        newRow.append($("<td>").text(ssn));
+        newRow.append($("<td>").text(address));
+        newRow.append($("<td>").text(phone));
+
+        table.append(newRow);
+
+        // Réinitialiser le formulaire
+        $("#data-form")[0].reset();
+    });
+});
+
+
+
+</script>
+
+
+
+        
+
+
+    
+
+     
+
+
+
+<script src="script.js"></script>
+
+
+    
+
+    
+
+    <!-- ***** Footer Area Start ***** -->
+    <footer class="footer-area section-padding-100">
+        <!-- Main Footer Area -->
+        <div class="main-footer-area">
+            <div class="container-fluid">
+                <div class="row">
+
+                    <div class="col-12 col-sm-6 col-xl-3">
+                        <div class="footer-widget-area">
+                            <div class="footer-logo">
+                                <img src="img/core-img/logo.png" alt="">
+                            </div>
+                            <p>L’hôpital El-Maarouf a été inauguré en 1954. Son nom est emprunté au grand Cheikh Said Mohamed Bin Cheikh Al-Maarouf (1851-1904).</p>
+                            <div class="footer-social-info">
+                                <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-xl-3">
+                        <div class="footer-widget-area">
+                            <div class="widget-title">  
+                                <h6>Dernières nouvelles</h6>
+                            </div>
+                            <div class="widget-blog-post">
+                                <!-- Single Blog Post -->
+                                <div class="widget-single-blog-post d-flex">
+                                    <div class="widget-post-thumbnail">
+                                        <img src="img/blog-img/ln1.jpg" alt="">
+                                    </div>
+                                    <div class="widget-post-content">
+                                        <a href="#">De meilleurs soins de santé</a>
+                                        <p>27 mars 2023</p>
+                                    </div>
+                                </div>
+                                <!-- Single Blog Post -->
+                                <div class="widget-single-blog-post d-flex">
+                                    <div class="widget-post-thumbnail">
+                                        <img src="img/blog-img/ln2.jpg" alt="">
+                                    </div>
+                                    <div class="widget-post-content">
+                                        <a href="#">Un nouveau médicament est testé</a>
+                                        <p>15 février 2021</p>
+                                    </div>
+                                </div>
+                                <!-- Single Blog Post -->
+                                <div class="widget-single-blog-post d-flex">
+                                    <div class="widget-post-thumbnail">
+                                        <img src="img/blog-img/ln3.jpg" alt="">
+                                    </div>
+                                    <div class="widget-post-content">
+                                        <a href="#">Conseils du ministère de la Santé</a>
+                                        <p>02 décembre 2017</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-xl-3">
+                        <div class="footer-widget-area">
+                            <div class="widget-title">
+                                <h6>Formulaire de contact</h6>
+                            </div>
+                            <div class="footer-contact-form">
+                                <form action="#" method="post">
+                                    <input type="text" class="form-control border-top-0 border-right-0 border-left-0" name="footer-name" id="footer-name" placeholder="Nom">
+                                    <input type="email" class="form-control border-top-0 border-right-0 border-left-0" name="footer-email" id="footer-email" placeholder="Email">
+                                    <textarea name="message" class="form-control border-top-0 border-right-0 border-left-0" id="footerMessage" placeholder="Message"></textarea>
+                                    <button type="submit" class="btn medilife-btn">Contactez-nous <span>+</span></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-xl-3">
+                        <div class="footer-widget-area">
+                            <div class="widget-title">
+                                <h6>Dernières Nouvelles</h6>
+                            </div>
+
+                            <div class="footer-newsletter-area">
+                                <form action="#">
+                                    <input type="email" class="form-control border-0 mb-0" name="newsletterEmail" id="newsletterEmail" placeholder="Your Email Here">
+                                    <button type="submit">Subscribe</button>
+                                </form>
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Bottom Footer Area -->
+        <div class="bottom-footer-area">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="bottom-footer-content">
+                            <!-- Copywrite Text -->
+                            <div class="copywrite-text">
+                                <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+</p>
+<p>Re-distributed by <a href="https://themewagon.com/" target="_blank">Themewagon</a>
+</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ***** Footer Area End ***** -->
+
+    <!-- jQuery (Necessary for All JavaScript Plugins) -->
+    <script src="js/jquery/jquery-2.2.4.min.js"></script>
+    <!-- Popper js -->
+    <script src="js/popper.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Plugins js -->
+    <script src="js/plugins.js"></script>
+    <!-- Active js -->
+    <script src="js/active.js"></script>
+
+</body>
+
+</html>

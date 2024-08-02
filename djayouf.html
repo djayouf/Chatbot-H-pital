@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <!-- Title  -->
+    <title>Hôpital el-maarouf</title>
+
+    <!-- Favicon  -->
+    <link rel="icon" href="img/core-img/favicon.ico">
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="medilife-load"></div>
+    </div>
+
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area">
+        <!-- Top Header Area -->
+        <div class="top-header-area">
+            <div class="container h-100">
+                <div class="row h-100">
+                    <div class="col-12 h-100">
+                        <div class="h-100 d-md-flex justify-content-between align-items-center">
+                            <p>Bienvenue <span>El-Maarouf</span> </p>
+                            <p>Moroni Ambassadeur : info@chn-elmaarouf.com  : <span>773 26 04 ou le 115</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Header Area -->
+        <div class="main-header-area" id="stickyHeader">
+            <div class="container h-100">
+                <div class="row h-100 align-items-center">
+                    <div class="col-12 h-100">
+                        <div class="main-menu h-100">
+                            <nav class="navbar h-100 navbar-expand-lg">
+                                <!-- Logo Area  -->
+                                <a class="navbar-brand" href="index.html"><img src="img/core-img/logo.png" alt="Logo"></a>
+
+                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#medilifeMenu" aria-controls="medilifeMenu" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+
+                                <div class="collapse navbar-collapse" id="medilifeMenu">
+                                    <!-- Menu Area -->
+                                    <ul class="navbar-nav ml-auto">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="index.html">Accueil <span class="sr-only">(current)</span></a>
+                                        </li>
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages</a>
+                                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                                <a class="dropdown-item" href="index.html">Accueil</a>
+                                                <a class="dropdown-item" href="about-us.html">À propos de nous</a>
+                                                <a class="dropdown-item" href="services.html">Services</a>
+                                                <a class="dropdown-item" href="blog.html">Nouvelles</a>
+                                                <a class="dropdown-item" href="single-blog.html">Détails de l'actualité</a>
+                                                <a class="dropdown-item" href="contact.html">Contact</a>
+                                                <a class="dropdown-item" href="elements.html">Éléments</a>
+                                                <a class="dropdown-item" href="index-icons.html">Toutes les icônes</a>
+                                            </div>
+                                        </li>
+                                        <li class="nav-item active">
+                                            <a class="nav-link" href="about-us.html">À propos de nous</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="services.html">Services</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="blog.html">Nouvelles</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="contact.html">Contact</a>
+                                        </li>
+                                    </ul>
+                                    <!-- Appointment Button -->
+                                    <a href="./djayouf.html" class="btn medilife-appoint-btn ml-30"> Djayouf <span>  votre assistant</a>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+    
+
+    <!-- ***** Breadcumb Area Start ***** -->
+    <section class="breadcumb-area bg-img gradient-background-overlay" style="background-image: url(img/bg-img/breadcumb1.jpg);">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-12">
+                    <div class="breadcumb-content">
+                        <h3 class="breadcumb-title">Djayouf votre assistant</h3>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Breadcumb Area End ***** -->
+
+
+
+
+
+
+
+
+
+<center>
+    <div class="post-content">
+        <div class="post-author">
+            <a href="#"><img src="./img/core-img/plus.png" alt=""  width="150"></a>
+        </div>
+    <!-- Conteneur du Chatbot -->
+    <div class="chatbot-container">
+        <div class="chatbot-header">
+            <p>Bienvenue sur Djayouf, votre assistant IA !</p>
+        </div>
+        <div class="chatbot-chatbox">
+            <div class="chatbot-messages" id="chatbot-messages">
+                <div class="chatbot-message djayouf">Bonjour ! Comment puis-je vous aider aujourd'hui ?</div>
+            </div>
+            <input type="text" id="user-input" placeholder="Posez une question..." onkeypress="handleUserInput(event)">
+        </div>
+    </div>
+
+    <script>
+        // Fonction pour gérer l'entrée de l'utilisateur et générer des réponses
+        function handleUserInput(event) {
+            if (event.key === 'Enter') {
+                const userInput = document.getElementById('user-input').value;
+                const chatbotMessages = document.getElementById('chatbot-messages');
+                // Ajouter le message de l'utilisateur au chat
+                chatbotMessages.innerHTML += `<div class="chatbot-message user">${userInput}</div>`;
+                // Générer une réponse de Djayouf
+                const response = generateResponse(userInput);
+                // Ajouter la réponse de Djayouf au chat
+                chatbotMessages.innerHTML += `<div class="chatbot-message djayouf">${response}</div>`;
+                // Parler la réponse de Djayouf
+                speak(response);
+                // Effacer le champ de saisie de l'utilisateur
+                document.getElementById('user-input').value = '';
+                // Faire défiler jusqu'au dernier message
+                chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+            }
+        }
+
+        // Fonction pour générer des réponses
+        function generateResponse(userInput) {
+            const keywords = userInput.toLowerCase().split(' ');
+            
+            if (keywords.includes('activités')) {
+                return "Pour voir nos dernières activités, visitez la section 'Actualités' sur notre site Web.";
+            } else if (keywords.includes('pediatrie')) {
+                return findDoctorsBySpecialty('Pédiatrie');
+            } else if (keywords.includes('generaliste')) {
+                return findDoctorsBySpecialty('Généraliste');
+            } else if (keywords.includes('tous') && keywords.includes('docteurs')) {
+                return displayAllDoctors();
+            } else {
+                return "Désolé, je ne comprends pas votre question. Essayez de poser une question sur les médecins, par exemple, 'Montrez-moi les pédiatres' ou 'Montrez tous les médecins'.";
+            }
+        }
+
+        // Exemple de données sur les médecins
+        const doctors = [
+            {
+                name: "Dr. Jean Dupont",
+                specialty: "Pédiatrie",
+                location: "Paris",
+                photo: "lundi 9h00 a 17h30"
+            },
+            {
+                name: "Dr. Marie Martin",
+                specialty: "Pédiatrie",
+                location: "Marseille",
+                photo: ""
+            },
+            {
+                name: "Dr. Michel Dubois",
+                specialty: "Pédiatrie",
+                location: "Lyon",
+                photo: ""
+            },
+            {
+                name: "Dr. Sophie Leclerc",
+                specialty: "Généraliste",
+                location: "Bordeaux",
+                photo: ""
+            },
+            {
+                name: "Dr. Patrick Lefebvre",
+                specialty: "Généraliste",
+                location: "Lille",
+                photo: ""
+            },
+            {
+                name: "Dr. Isabelle Laurent",
+                specialty: "Généraliste",
+                location: "Strasbourg",
+                photo: ""
+            },
+            {
+                name: "Dr. François Dubois",
+                specialty: "Généraliste",
+                location: "Toulouse",
+                photo: ""
+            }
+        ];
+
+        function findDoctorsBySpecialty(specialty) {
+            const matchingDoctors = doctors.filter(doctor => {
+                return doctor.specialty.toLowerCase() === specialty.toLowerCase();
+            });
+
+            if (matchingDoctors.length > 0) {
+                let response = `Voici les médecins spécialisés en ${specialty} avec leur emplacement :\n`;
+
+                matchingDoctors.forEach(doctor => {
+                    response += `Nom du médecin : ${doctor.name}\n`;
+                    response += `Spécialité : ${doctor.specialty}\n`;
+                    response += `Emplacement : ${doctor.location}\n`;
+                    response += `Photo : ${doctor.photo}\n\n`;
+                });
+
+                return response;
+            } else {
+                return `Désolé, nous n'avons pas de médecins spécialisés en ${specialty} pour le moment.`;
+            }
+        }
+
+        function displayAllDoctors() {
+            let response = "Voici tous nos médecins :\n";
+            doctors.forEach(doctor => {
+                response += `Nom du médecin : ${doctor.name}\n`;
+                response += `Spécialité : ${doctor.specialty}\n`;
+                response += `Emplacement : ${doctor.location}\n`;
+                response += `Photo : ${doctor.photo}\n\n`;
+            });
+            return response;
+        }
+
+        // Fonction pour parler la réponse
+        function speak(text) {
+            const synth = window.speechSynthesis;
+            const utterance = new SpeechSynthesisUtterance(text);
+            synth.speak(utterance);
+        }
+
+
+
+
+
+
+
+// Fonction pour générer des réponses
+function generateResponse(userInput) {
+    const keywords = userInput.toLowerCase().split(' ');
+
+    if (keywords.includes('activités')) {
+        return "Pour voir nos dernières activités, visitez la section 'Actualités' sur notre site Web.";
+    } else if (keywords.includes('pediatrie')) {
+        return findDoctorsBySpecialty('Pédiatrie');
+    } else if (keywords.includes('generaliste')) {
+        return findDoctorsBySpecialty('Généraliste');
+    } else if (keywords.includes('tous') && keywords.includes('docteurs')) {
+        return displayAllDoctors();
+    } else if (keywords.includes('malade') && keywords.includes('tête')) {
+        return "Lorsque vous avez mal à la tête, voici quelques conseils :\n1. Prenez un repos suffisant.\n2. Buvez de l'eau pour rester hydraté.\n3. Évitez les environnements bruyants et lumineux.\n4. Vous pouvez prendre un médicament en vente libre pour soulager la douleur, mais assurez-vous de suivre les instructions sur l'emballage.\n5. Si la douleur persiste ou s'aggrave, consultez un médecin pour un diagnostic précis.";
+    } else if (keywords.includes('malade') && keywords.includes('ventre')) {
+        return "Si vous avez des problèmes d'estomac, voici quelques conseils :\n1. Évitez les aliments lourds et épicés.\n2. Buvez de la tisane à la camomille ou de l'eau chaude pour apaiser l'estomac.\n3. Essayez de manger des aliments faciles à digérer comme des bananes, des flocons d'avoine ou du riz.\n4. Si les symptômes persistent, consultez un médecin pour un diagnostic précis.";
+    } else if (keywords.includes('fatigue')) {
+        return "Si vous vous sentez fatigué, voici quelques conseils :\n1. Assurez-vous de dormir suffisamment la nuit.\n2. Évitez la caféine et les stimulants en fin de journée.\n3. Mangez équilibré et faites de l'exercice régulièrement.\n4. Consultez un médecin si la fatigue persiste, car elle peut être le signe d'un problème médical sous-jacent.";
+    } else if (keywords.includes('mal') && keywords.includes('gorge')) {
+        return "Lorsque vous avez mal à la gorge, voici quelques conseils :\n1. Gargarisez-vous avec de l'eau salée tiède.\n2. Buvez des liquides chauds comme du thé au miel ou de la soupe.\n3. Évitez de fumer ou d'exposer votre gorge à la fumée.\n4. Si la douleur persiste, consultez un médecin pour un diagnostic précis.";
+    } else if (keywords.includes('douleurs') && keywords.includes('musculaires')) {
+        return "En cas de douleurs musculaires, voici quelques conseils :\n1. Reposez-vous et évitez de surmener les muscles affectés.\n2. Appliquez des compresses chaudes ou froides pour soulager la douleur.\n3. Prenez un anti-inflammatoire en vente libre si nécessaire, en suivant les instructions.\n4. Si les douleurs musculaires sont sévères ou persistent, consultez un médecin pour un avis médical.";
+    } else if (keywords.includes('fièvre')) {
+        return "En cas de fièvre, voici quelques conseils :\n1. Reposez-vous et restez au frais.\n2. Buvez beaucoup d'eau pour rester hydraté.\n3. Vous pouvez prendre un médicament contre la fièvre en vente libre, mais assurez-vous de suivre les instructions sur l'emballage.\n4. Consultez un médecin si la fièvre persiste pendant plus de quelques jours.";
+    } else if (keywords.includes('toux')) {
+        return "Si vous avez de la toux, voici quelques conseils :\n1. Buvez beaucoup d'eau pour apaiser la gorge.\n2. Utilisez un humidificateur pour aider à soulager la toux sèche.\n3. Évitez la fumée de cigarette et les irritants de l'air.\n4. Si la toux persiste ou s'aggrave, consultez un médecin pour un diagnostic précis.";
+    } else if (keywords.includes('problèmes') && keywords.includes('peau')) {
+        return "Pour les problèmes de peau, voici quelques conseils :\n1. Gardez la peau propre et hydratée.\n2. Évitez de gratter les démangeaisons pour prévenir les irritations.\n3. Utilisez des produits adaptés à votre type de peau.\n4. Consultez un dermatologue si les problèmes de peau persistent ou s'aggravent.";
+    } else if (keywords.includes('allergies')) {
+        return "En cas d'allergies, voici quelques conseils :\n1. Évitez les déclencheurs allergènes connus.\n2. Prenez des antihistaminiques en vente libre si nécessaire.\n3. Consultez un allergologue pour un diagnostic et des recommandations de traitement si vos allergies sont sévères.";
+    } else if (keywords.includes('maux') && keywords.includes('dos')) {
+        return "En cas de maux de dos, voici quelques conseils :\n1. Maintenez une bonne posture.\n2. Évitez de soulever des objets lourds de manière incorrecte.\n3. Faites des exercices de renforcement des muscles du dos.\n4. Appliquez de la chaleur ou de la glace sur la zone douloureuse.\n5. Si la douleur persiste, consultez un professionnel de la santé pour un examen approfondi et des recommandations de traitement.";
+    } else if (keywords.includes('problèmes') && keywords.includes('sommeil')) {
+        return "Si vous avez des problèmes de sommeil, voici quelques conseils pour améliorer votre sommeil :\n1. Établissez une routine de sommeil régulière.\n2. Évitez les écrans lumineux avant le coucher.\n3. Créez un environnement de sommeil confortable et sombre.\n4. Limitez la consommation de caféine et d'alcool le soir.\n5. Si les problèmes de sommeil persistent, consultez un professionnel de la santé pour un diagnostic et des conseils supplémentaires.";
+    } else if (keywords.includes('allergies') && keywords.includes('alimentaires')) {
+        return "En cas d'allergies alimentaires, voici quelques conseils :\n1. Évitez les aliments auxquels vous êtes allergique.\n2. Lisez attentivement les étiquettes des produits pour détecter les allergènes.\n3. Portez un bracelet d'alerte médicale en cas d'allergie grave.\n4. Consultez un allergologue pour des tests d'allergie et des recommandations spécifiques.";
+    } else if (keywords.includes('malade') && keywords.includes('gorge')) {
+        return "Si vous avez mal à la gorge, voici quelques conseils :\n1. Gargarisez-vous avec de l'eau salée tiède.\n2. Buvez des liquides chauds comme du thé au miel ou de la soupe.\n3. Évitez de fumer ou d'exposer votre gorge à la fumée. \n4. Si la douleur persiste, consultez un médecin pour un diagnostic précis.";
+    } else if (keywords.includes('bronchite')) {
+        return "En cas de symptômes de bronchite, voici quelques conseils :\n1. Reposez-vous et restez bien hydraté.\n2. Utilisez un humidificateur pour aider à dégager les voies respiratoires.\n3. Évitez la fumée de cigarette et les irritants de l'air.\n4. Si les symptômes persistent ou s'aggravent, consultez un médecin pour un diagnostic et des recommandations de traitement.";
+    } else if (keywords.includes('diarrhée')) {
+        return "En cas de diarrhée, voici quelques conseils :\n1. Restez bien hydraté en buvant beaucoup d'eau, de bouillon ou de solutions de réhydratation orale.\n2. Évitez les aliments gras, épicés et difficiles à digérer.\n3. Reposez-vous et évitez les activités épuisantes.\n4. Consultez un médecin si la diarrhée persiste pendant plus de quelques jours ou s'accompagne d'autres symptômes graves.";
+    } else if (keywords.includes('système') && keywords.includes('immunitaire')) {
+        return "Le système immunitaire est essentiel pour la protection de votre corps contre les infections. Pour renforcer votre système immunitaire, vous pouvez :\n1. Manger une alimentation équilibrée riche en fruits, légumes et sources de protéines maigres.\n2. Faire de l'exercice régulièrement.\n3. Dormir suffisamment pour permettre à votre corps de récupérer.\n4. Réduire le stress grâce à des techniques de gestion du stress comme la méditation et la relaxation.\n5. Éviter la consommation excessive d'alcool et ne pas fumer.";
+    } else if (keywords.includes('diabète')) {
+        return "Le diabète est une condition qui affecte la régulation du glucose sanguin. Si vous êtes diabétique, voici quelques conseils :\n1. Suivez les recommandations de votre médecin en ce qui concerne votre régime alimentaire, la prise de médicaments et la surveillance de votre glycémie.\n2. Faites de l'exercice régulièrement pour aider à contrôler la glycémie.\n3. Évitez les aliments riches en sucre et surveillez votre consommation de glucides.\n4. Assurez-vous de connaître les symptômes de l'hypoglycémie et de l'hyperglycémie, et agissez en conséquence.\n5. Consultez régulièrement votre professionnel de la santé pour un suivi et des ajustements de traitement si nécessaire.";
+    } else if (keywords.includes('malade') && keywords.includes('estomac')) {
+        return "Lorsque vous avez des problèmes d'estomac, voici quelques conseils :\n1. Évitez les aliments lourds et épicés.\n2. Buvez de la tisane à la camomille ou de l'eau chaude pour apaiser l'estomac.\n3. Essayez de manger des aliments faciles à digérer comme des bananes, des flocons d'avoine ou du riz.\n4. Si les symptômes persistent, consultez un médecin pour un diagnostic précis.";
+    } else if (keywords.includes('quel') && keywords.includes('votre') && keywords.includes('nom')) {
+        return "Je m'appelle Djayouf, je suis votre assistant IA et thérapeute !";
+    } else if (keywords.includes('qui') && keywords.includes('ta') && keywords.includes('programme')) {
+        return "Je m'appelle Djadja Youssouf Abdou, je suis de nationalité comorienne, et je suis né le 8 juin 1998 à Hantsambou Itsandra. J'ai un diplôme en programmation.";
+    } else if (keywords.includes('merci')) {
+        return "Je vous en prie. Je suis là pour vous aider, c'est un plaisir pour moi. Si vous avez d'autres questions, n'hésitez pas.";
+    // ... (ajoutez ici d'autres réponses médicales)
+
+} else if (keywords.includes('thérapie') || keywords.includes('psychothérapie')) {
+        return "La thérapie est un moyen efficace de traiter les problèmes émotionnels et mentaux. Si vous cherchez un thérapeute, je peux vous aider à trouver un professionnel qualifié dans votre région. Quels sont les problèmes ou les questions spécifiques que vous souhaitez aborder en thérapie ?";
+    } else if (keywords.includes('dépression')) {
+        return "La dépression est une condition sérieuse. Il est important de parler à un professionnel de la santé mentale. Un thérapeute peut vous aider à comprendre et à gérer la dépression. Souhaitez-vous des informations sur la recherche d'un thérapeute spécialisé dans le traitement de la dépression ?";
+    } else if (keywords.includes('anxiété')) {
+        return "L'anxiété peut être très perturbante, mais il existe des méthodes pour la gérer. La thérapie cognitivo-comportementale (TCC) est souvent efficace pour l'anxiété. Souhaitez-vous en savoir plus sur la TCC ou comment trouver un thérapeute spécialisé ?";
+    } else if (keywords.includes('thérapie de couple')) {
+        return "La thérapie de couple peut aider à résoudre les problèmes relationnels. Si vous cherchez de l'aide pour votre relation, je peux vous fournir des informations sur la thérapie de couple et comment trouver un thérapeute spécialisé.";
+    } else if (keywords.includes('stress') || keywords.includes('gestion du stress')) {
+        return "La gestion du stress est importante pour la santé mentale. Un thérapeute peut vous enseigner des techniques de gestion du stress. Souhaitez-vous en savoir plus sur ces techniques ou trouver un thérapeute qui peut vous aider ?";
+    } else if (keywords.includes('suicide')) {
+        return "Je suis vraiment désolé d'entendre que vous vous sentez ainsi, mais je ne peux pas vous fournir l'aide dont vous avez besoin. Vous devriez parler à un professionnel de la santé mentale ou à un service d'urgence pour obtenir de l'aide immédiate.";
+    } else if (keywords.includes('Merci')) {
+        return "Je suis là pour vous aider. Si vous avez d'autres questions ou avez besoin de plus d'informations sur la thérapie, n'hésitez pas à demander.";
+    } 
+
+    else if (keywords.includes('yedje')) {
+        return "karibou hounou lopitali el marouf";
+    }
+
+
+    
+    else {
+        return "Comment puis-je vous aider aujourd'hui ? Posez-moi vos questions sur la santé ou la thérapie.";
+    }
+
+    
+    
+}
+
+
+
+
+
+
+
+
+        
+    </script>
+
+
+
+
+<style>
+    /* Style de base pour le chatbot container */
+.chatbot-container {
+    width: 700px;
+    margin: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+/* Style de l'en-tête du chatbot */
+.chatbot-header {
+    background-color: #00ff3c;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Style de la boîte de chat */
+.chatbot-chatbox {
+    padding: 10px;
+}
+
+/* Style des messages du chatbot */
+.chatbot-message {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    max-width: 80%;
+}
+
+/* Style des messages de l'utilisateur */
+.chatbot-message.user {
+    background-color: #f0f0f0;
+    text-align: right;
+}
+
+/* Style des messages du chatbot */
+.chatbot-message.djayouf {
+    background-color: #007BFF;
+    color: #fff;
+}
+
+/* Style du champ de saisie de l'utilisateur */
+#user-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* Style pour le texte de réponse du chatbot */
+.chatbot-message.djayouf p {
+    margin: 0;
+    padding: 0;
+}
+
+</style>
+</center>
+
+
+
+    
+
+    
+
+    <!-- ***** Footer Area Start ***** -->
+    <footer class="footer-area section-padding-100">
+        <!-- Main Footer Area -->
+        <div class="main-footer-area">
+            <div class="container-fluid">
+                <div class="row">
+
+                    <div class="col-12 col-sm-6 col-xl-3">
+                        <div class="footer-widget-area">
+                            <div class="footer-logo">
+                                <img src="img/core-img/logo.png" alt="">
+                            </div>
+                            <p>L’hôpital El-Maarouf a été inauguré en 1954. Son nom est emprunté au grand Cheikh Said Mohamed Bin Cheikh Al-Maarouf (1851-1904).</p>
+                            <div class="footer-social-info">
+                                <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-xl-3">
+                        <div class="footer-widget-area">
+                            <div class="widget-title">  
+                                <h6>Dernières nouvelles</h6>
+                            </div>
+                            <div class="widget-blog-post">
+                                <!-- Single Blog Post -->
+                                <div class="widget-single-blog-post d-flex">
+                                    <div class="widget-post-thumbnail">
+                                        <img src="img/blog-img/ln1.jpg" alt="">
+                                    </div>
+                                    <div class="widget-post-content">
+                                        <a href="#">De meilleurs soins de santé</a>
+                                        <p>27 mars 2023</p>
+                                    </div>
+                                </div>
+                                <!-- Single Blog Post -->
+                                <div class="widget-single-blog-post d-flex">
+                                    <div class="widget-post-thumbnail">
+                                        <img src="img/blog-img/ln2.jpg" alt="">
+                                    </div>
+                                    <div class="widget-post-content">
+                                        <a href="#">Un nouveau médicament est testé</a>
+                                        <p>15 février 2021</p>
+                                    </div>
+                                </div>
+                                <!-- Single Blog Post -->
+                                <div class="widget-single-blog-post d-flex">
+                                    <div class="widget-post-thumbnail">
+                                        <img src="img/blog-img/ln3.jpg" alt="">
+                                    </div>
+                                    <div class="widget-post-content">
+                                        <a href="#">Conseils du ministère de la Santé</a>
+                                        <p>02 décembre 2017</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-xl-3">
+                        <div class="footer-widget-area">
+                            <div class="widget-title">
+                                <h6>Formulaire de contact</h6>
+                            </div>
+                            <div class="footer-contact-form">
+                                <form action="#" method="post">
+                                    <input type="text" class="form-control border-top-0 border-right-0 border-left-0" name="footer-name" id="footer-name" placeholder="Nom">
+                                    <input type="email" class="form-control border-top-0 border-right-0 border-left-0" name="footer-email" id="footer-email" placeholder="Email">
+                                    <textarea name="message" class="form-control border-top-0 border-right-0 border-left-0" id="footerMessage" placeholder="Message"></textarea>
+                                    <button type="submit" class="btn medilife-btn">Contactez-nous <span>+</span></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-xl-3">
+                        <div class="footer-widget-area">
+                            <div class="widget-title">
+                                <h6>Dernières Nouvelles</h6>
+                            </div>
+
+                            <div class="footer-newsletter-area">
+                                <form action="#">
+                                    <input type="email" class="form-control border-0 mb-0" name="newsletterEmail" id="newsletterEmail" placeholder="Your Email Here">
+                                    <button type="submit">Subscribe</button>
+                                </form>
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Bottom Footer Area -->
+        <div class="bottom-footer-area">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="bottom-footer-content">
+                            <!-- Copywrite Text -->
+                            <div class="copywrite-text">
+                                <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+</p>
+<p>Re-distributed by <a href="https://themewagon.com/" target="_blank">Themewagon</a>
+</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ***** Footer Area End ***** -->
+
+    <!-- jQuery (Necessary for All JavaScript Plugins) -->
+    <script src="js/jquery/jquery-2.2.4.min.js"></script>
+    <!-- Popper js -->
+    <script src="js/popper.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Plugins js -->
+    <script src="js/plugins.js"></script>
+    <!-- Active js -->
+    <script src="js/active.js"></script>
+
+</body>
+
+</html>

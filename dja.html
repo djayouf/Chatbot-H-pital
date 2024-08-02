@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <!-- Méta-tags et styles -->
+</head>
+<body>
+    <!-- Structure HTML existante -->
+
+    <!-- Conteneur du Chatbot -->
+    <div class="chatbot-container">
+        <div class="chatbot-header">
+            <p>Bienvenue sur Djayouf, votre assistant IA !</p>
+        </div>
+        <div class="chatbot-chatbox">
+            <div class="chatbot-messages" id="chatbot-messages">
+                <div class="chatbot-message djayouf">Bonjour ! Comment puis-je vous aider aujourd'hui ?</div>
+            </div>
+            <input type="text" id="user-input" placeholder="Posez une question..." onkeypress="handleUserInput(event)">
+        </div>
+    </div>
+
+    <script>
+        // Fonction pour gérer l'entrée de l'utilisateur et générer des réponses
+        function handleUserInput(event) {
+            if (event.key === 'Enter') {
+                const userInput = document.getElementById('user-input').value;
+                const chatbotMessages = document.getElementById('chatbot-messages');
+                // Ajouter le message de l'utilisateur au chat
+                chatbotMessages.innerHTML += `<div class="chatbot-message user">${userInput}</div>`;
+                // Générer une réponse de Djayouf
+                const response = generateResponse(userInput);
+                // Ajouter la réponse de Djayouf au chat
+                chatbotMessages.innerHTML += `<div class="chatbot-message djayouf">${response}</div>`;
+                // Parler la réponse de Djayouf
+                speak(response);
+                // Effacer le champ de saisie de l'utilisateur
+                document.getElementById('user-input').value = '';
+                // Faire défiler jusqu'au dernier message
+                chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+            }
+        }
+
+        // Fonction pour générer des réponses
+        function generateResponse(userInput) {
+            const keywords = userInput.toLowerCase().split(' ');
+            
+            if (keywords.includes('activités')) {
+                return "Pour voir nos dernières activités, visitez la section 'Actualités' sur notre site Web.";
+            } else if (keywords.includes('pediatrie')) {
+                return findDoctorsBySpecialty('Pédiatrie');
+            } else if (keywords.includes('generaliste')) {
+                return findDoctorsBySpecialty('Généraliste');
+            } else if (keywords.includes('tous') && keywords.includes('docteurs')) {
+                return displayAllDoctors();
+            } else {
+                return "Désolé, je ne comprends pas votre question. Essayez de poser une question sur les médecins, par exemple, 'Montrez-moi les pédiatres' ou 'Montrez tous les médecins'.";
+            }
+        }
+
+        // Exemple de données sur les médecins
+        const doctors = [
+            {
+                name: "Dr. Jean Dupont",
+                specialty: "Pédiatrie",
+                location: "Paris",
+                photo: "lundi 9h00 a 17h30"
+            },
+            {
+                name: "Dr. Marie Martin",
+                specialty: "Pédiatrie",
+                location: "Marseille",
+                photo: ""
+            },
+            {
+                name: "Dr. Michel Dubois",
+                specialty: "Pédiatrie",
+                location: "Lyon",
+                photo: ""
+            },
+            {
+                name: "Dr. Sophie Leclerc",
+                specialty: "Généraliste",
+                location: "Bordeaux",
+                photo: ""
+            },
+            {
+                name: "Dr. Patrick Lefebvre",
+                specialty: "Généraliste",
+                location: "Lille",
+                photo: ""
+            },
+            {
+                name: "Dr. Isabelle Laurent",
+                specialty: "Généraliste",
+                location: "Strasbourg",
+                photo: ""
+            },
+            {
+                name: "Dr. François Dubois",
+                specialty: "Généraliste",
+                location: "Toulouse",
+                photo: ""
+            }
+        ];
+
+        function findDoctorsBySpecialty(specialty) {
+            const matchingDoctors = doctors.filter(doctor => {
+                return doctor.specialty.toLowerCase() === specialty.toLowerCase();
+            });
+
+            if (matchingDoctors.length > 0) {
+                let response = `Voici les médecins spécialisés en ${specialty} avec leur emplacement :\n`;
+
+                matchingDoctors.forEach(doctor => {
+                    response += `Nom du médecin : ${doctor.name}\n`;
+                    response += `Spécialité : ${doctor.specialty}\n`;
+                    response += `Emplacement : ${doctor.location}\n`;
+                    response += `Photo : ${doctor.photo}\n\n`;
+                });
+
+                return response;
+            } else {
+                return `Désolé, nous n'avons pas de médecins spécialisés en ${specialty} pour le moment.`;
+            }
+        }
+
+        function displayAllDoctors() {
+            let response = "Voici tous nos médecins :\n";
+            doctors.forEach(doctor => {
+                response += `Nom du médecin : ${doctor.name}\n`;
+                response += `Spécialité : ${doctor.specialty}\n`;
+                response += `Emplacement : ${doctor.location}\n`;
+                response += `Photo : ${doctor.photo}\n\n`;
+            });
+            return response;
+        }
+
+        // Fonction pour parler la réponse
+        function speak(text) {
+            const synth = window.speechSynthesis;
+            const utterance = new SpeechSynthesisUtterance(text);
+            synth.speak(utterance);
+        }
+    </script>
+
+
+
+
+
+
+
+</body>
+</html>
